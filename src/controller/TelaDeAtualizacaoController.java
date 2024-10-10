@@ -1,3 +1,4 @@
+
 package controller;
 import model.*;
 import view.*;
@@ -25,12 +26,12 @@ public class TelaDeAtualizacaoController extends TelaDeAtualizacaoView {
     }
 
     public static void atualizarId() {
-        try {
+        try { // tentar 
             String atualizarNome = "";
             String atualizarEmail = "";
             String atualizarSenha = "";
 
-            if (txtNome.getText().trim().equals(nomeAtual) == false) {
+            if (txtNome.getText().trim().equals(nomeAtual) == false) { // if (se = condição) e uma estrutura de validação onde vc compara as informações, caso não retorne V tem outra opção
                 atualizarNome = "`nome` = '" + txtNome.getText() + "'";
             }
 
@@ -63,7 +64,7 @@ public class TelaDeAtualizacaoController extends TelaDeAtualizacaoView {
             } else {
                 lblNotificacoes.setText("Não foram encontradas alterações para atualizar o id " + cbxId.getSelectedItem().toString());
             }
-        } catch (Exception e) {
+        } catch (Exception e) { // encontrar o erro 
             lblNotificacoes.setText(setHtmlFormat("Não foi possível atualizar o id! Por favor, verifique e tente novamente."));
             System.err.println("Erro: " + e);
         }
@@ -105,4 +106,5 @@ public class TelaDeAtualizacaoController extends TelaDeAtualizacaoView {
         }
     }
 
-}
+}  // classe = uma classe é um objeto q vc declara tem que ter o mesmo nome do arquivo .java uma classe 
+// for = 
